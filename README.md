@@ -17,8 +17,10 @@ So, here I have automated everthing using Ansible.
 <br>
 To create a role, use command :leftwards_arrow_with_hook:
 
-      ansible-galaxy init provisionEC2 
+      ansible-galaxy init ec2environment
      
 Similarly, you can create other roles. 
 
 <br>
+
+
