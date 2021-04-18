@@ -1,0 +1,40 @@
+- hosts: hdfsnn
+  roles: 
+    - name: setting up namenode
+      role: hdfs-namenode
+
+- hosts: hdfsdn 
+  roles: 
+    - name: setting up datanode 
+      role: hdfs-datanode
+
+- hosts: mapredjt
+  roles: 
+    - name: setting up jobtracker 
+      role: mapreduce-jobtracker
+
+- hosts: mapredtt
+  roles:
+    - name: setting up tasktracker 
+      role: mapreduce-tasktracker
+
+- hosts: hdfsnn
+  tasks:
+    - name: checking java process for client to connect NAMENODE
+      shell: netstat -tnlp | grep java
+      register: nnjava
+
+    - name: NAMENODE - client can connect on below port
+      debug:
+        var: nnjava.stdout_lines
+
+- hosts: mapredjt
+  tasks:
+    - name: checking java process for client to connect to JOBTRACKER
+      shell: netstat -tnlp | grep java
+      register: jtjava
+
+    - name: JOBTRACKER - client can connect on below port
+      debug:
+        var: jtjava.stdout_lines
+

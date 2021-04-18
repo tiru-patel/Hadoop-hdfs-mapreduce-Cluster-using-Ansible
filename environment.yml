@@ -1,0 +1,12 @@
+- hosts: localhost 
+  roles: 
+    - role: ec2environment
+
+- hosts: localhost
+  tasks:
+    - name: pausing playbook for 2 min
+      pause:
+        minutes: 2
+
+
+ 
