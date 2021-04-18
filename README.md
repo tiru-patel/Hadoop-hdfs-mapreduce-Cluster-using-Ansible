@@ -1,5 +1,5 @@
 # :sparkles:Fully Automated Hadoop HDFS-MAPREDUCE Cluster setup on top of AWS using Ansible:sparkles:
-Configuring aws vpc's, subnets, Internet Gateways and then launching EC2 instances is tedious task. However, configuring hadoop hdfs cluster and map reduce cluster is super tedious.
+Configuring aws vpc's, subnets, Internet Gateways and then launching EC2 instances is tedious task. Moreover, configuring hadoop hdfs cluster and map reduce cluster is super tedious.
 So, here I have automated everthing using Ansible. 
 
 ## :heavy_exclamation_mark: Steps to be followed to achieve this task :heavy_exclamation_mark: 
